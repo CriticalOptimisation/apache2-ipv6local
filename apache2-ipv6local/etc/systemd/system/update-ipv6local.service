@@ -1,0 +1,7 @@
+[Unit]
+Description=Update IPv6Local Prefix
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/update-ipv6local.sh
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run update-ipv6local.service every 8 hours
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=8h
+Unit=update-ipv6local.service
+
+[Install]
+WantedBy=timers.target
+

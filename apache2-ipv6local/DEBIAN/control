@@ -1,0 +1,14 @@
+Package: apache2-ipv6local
+Version: 1.0.0
+Section: net
+Priority: optional
+Architecture: all
+Installed-Size: 288
+Size: 2404
+Depends: apache2 (>= 2.4), ipv6calc (>= 1.0)
+Maintainer: CalCool Studios <devops@calcool.ai>
+Description: Custom package to handle IPv6 Local Prefix in Apache2
+ This package contains the configuration files and scripts to
+ update the IPv6 Local Prefix in Apache2 and maintain synchronization
+ with the ISP provided prefix.
+

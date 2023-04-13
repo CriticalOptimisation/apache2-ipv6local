@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Stop and disable update-ipv6local.timer
+systemctl stop update-ipv6local.timer
+systemctl disable update-ipv6local.timer
+
+# Disable Apache configuration
+a2disconf -q 00-ipv6
+
+# Reload Apache to apply changes
+systemctl try-reload-or-restart apache2
+

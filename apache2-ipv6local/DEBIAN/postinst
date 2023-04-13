@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Enable and start update-ipv6local.timer
+systemctl daemon-reload
+#systemctl enable update-upv6local.service
+systemctl enable update-ipv6local.timer
+systemctl start update-ipv6local.timer
+
+# Enable Apache configuration
+a2enconf -q 00-ipv6
+
+# Reload Apache to apply changes
+systemctl try-reload-or-restart apache2
+
